@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercury</title>
+    <h1>This is a sample page for Mercury</h1>
+</head>
+<body>
+Word Counter Form
+<form action="{% url 'count' %}">
+    <textarea cols="50" rows="10" name="alltext"></textarea>
+    <br />
+    <input type="submit" value="COUNT NOW!" /input>
+<br />
+<br />
+</form>
+<a href="{% url 'about' %}">
+    <input type="submit" value="About Us" /input>
+</a>
+</body>
+</html>
