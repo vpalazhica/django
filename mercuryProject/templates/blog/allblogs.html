@@ -8,7 +8,7 @@
   <meta name="author" content="">
 
 
-  <title>Bios</title>
+  <title>About the Characters!</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -19,14 +19,14 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'home' %}">Character Bios</a>
+      <a class="navbar-brand" href="{% url 'home' %}">THE TEAM</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="http://kodekloud.com">Website</a>
-          <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
+          <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+          <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Characters</a>
         </div>
       </div>
     </nav>
@@ -37,16 +37,14 @@
 
     <h1 class="text-center pt-3">The Road to DevOps</h1>
     <br />
-    <br />
-    <h2>Latest Posts</h2>
-    <hr />
 
     {% for blog in blogs.all %}
+        <hr />
+        <br />
       <h3>{{ blog.title }}</h3>
-    {{ blog.pub_date_pretty }}
-    <br />
     <img class="img-fluid" src="{{ blog.image.url }}" height=200 width=200 />
     <br />
+        <br />
     <p>{{ blog.body }}</p>
     {% endfor %}
 
